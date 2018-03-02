@@ -1,0 +1,25 @@
+<h1>My Awesome Todo App</h1>
+
+<h3>Users</h3>
+<% @users.each do |u| %>
+	<b>Name: </b><%= u.username %>
+	<b>Email: </b><%= u.email %>
+	<b>Age: </b><%= u.age %>
+	<br />
+<% end %>
+
+<h3>Cats</h3>
+<% @cats.each do |c| %>
+	<b>Name: </b><%= c.name %>
+	<br />
+<% end %>
+
+<h3>Todos</h3>
+<% @todos.each do |t| %>
+	<b>Task: </b><%= t.tasks %>
+	<b>Finished: </b><%= t.finished %>
+	<br />
+<% end %>
+
+<br />
+<%= link_to 'Create A New Todo', todos_new_path %>
